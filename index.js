@@ -93,9 +93,13 @@ function init() {
         return generateMarkdown(inputs);
     })
     .then(markdown => {
-        writeToFile('./', markdown);
+        writeToFile('./README.md', markdown);
+        console.log('Readme was created!');
     })
-}
+    .catch(error => {
+        console.log(error);
+    });
+};
 
 // Function call to initialize app
 init();
