@@ -15,90 +15,78 @@
 // THEN I am taken to the corresponding section of the README
 
 
-// TODO: Include packages needed for this application
+// Packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateMarkdown = require('./utils/generateMarkdown');
-// TODO: Create an array of questions for user input
+const generateMarkdown = require('./utils/generateMarkdown.js');
+// Array of questions for user input
 const questions = [ 
     {
         type: "input",
         name: "username",
-        question: "What is your Github username?",
+        message: "What is your Github username?",
     },
     {
         type: "input",
         name: "email",
-        question: "What is your email?",
+        message: "What is your email?",
     },
     {
         type: "input",
         name: "title",
-        question: "What title do you want give your project?",
+        message: "What title do you want give your project?",
 
     },
     {
         type: "input",
         name: "description",
-        question: "Write a short description of your project.",
+        message: "Write a short description of your project.",
     },
     {
         type: "input",
         name: "installation",
-        question: "What command should run to install dependencies?",
+        message: "What command should run to install dependencies?",
+        defaul: "npm i"
     },
     {
         type: "input",
         name: "license",
-        question: "What kind of license should your project have?",
+        message: "What kind of license should your project have?",
+        default: "MIT"
     },
     {
         type: "input",
         name: "tests",
-        question: "What command do you want to run for tests?",
+        message: "What command do you want to run for tests?",
+        default: "npm test"
     },
     {
         type: "input",
         name: "contributing",
-        question: "What are your contribution guidelines?",
+        message: "What are your contribution guidelines?",
     },
     {
         type: "input",
         name: "usage",
-        question: "What is your usage information?",
+        message: "What information do you want to provide about your repo?",
     },
 ];
 
-// TODO: Create a function to write README file
+// Function to write README file
 function writeToFile(fileName, data) {
-    var promise = new Promise((resolve, reject) =>{
-        fs.writeFile(fileName, data, (err) => {
+
+        fs.writeFile(fileName, generateMarkdown(data), (err) => {
             if (err) {
                 reject(err);
-                return;
             } else
-            resolve ({
-                state: true,
-                message: "File has been created!"
-            });
+           console.log('README file created!');
         });
-    });
-};
+    }
 
-// TODO: Create a function to initialize app
+// Function to initialize app
 function init() {
     inquirer.prompt(questions)
-    .then(inputs => {
-        console.log(inputs);
-        return generateMarkdown(inputs);
-    })
-    .then(markdown => {
-        writeToFile('./README.md', markdown);
-        console.log('Readme was created!');
-    })
-    .catch(error => {
-        console.log(error);
-    });
+    .then((data) => writeToFile('README.md',data));
 };
 
 // Function call to initialize app
