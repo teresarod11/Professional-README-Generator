@@ -79,7 +79,7 @@ function writeToFile(fileName, data) {
             if (err) {
                 reject(err);
             } else
-           console.log('README file created!');
+           console.log('README created!');
         });
     }
 

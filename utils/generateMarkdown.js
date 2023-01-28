@@ -14,7 +14,7 @@
 // WHEN I click on the links in the Table of Contents
 // THEN I am taken to the corresponding section of the README
 
-// TODO: Create a function that returns a license badge based on which license is passed in
+//Function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   if (license === 'The MIT License'){
@@ -24,7 +24,7 @@ function renderLicenseBadge(license) {
   }
 };
 
-// TODO: Create a function that returns the license link
+//Function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   if (license === 'The MIT License'){
@@ -34,38 +34,44 @@ function renderLicenseLink(license) {
   }
 };
 
-// TODO: Create a function that returns the license section of README
+//Function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   if ( license === 'none'){
     return '';
   } else {
-    return `Project is licensed by ${renderLicenseLink}`
+    return `Project is licensed by [${license}]`
   }
 };
 
-// TODO: Create a function to generate markdown for README
+//Function to generate markdown for README
 function generateMarkdown(data) {
   renderLicenseBadge(data.license);
   return `# ${data.title}
   
+  ## Table of Content
+  [Usage](#Usage)
+  [Description](#Description)
+  [Istallation](#Istallation)
+  [Contributing](#Contributing)
+  [License](#License)
+
   ## Description
-
+  ${data.description}
   ## Installation
-
+  ${data.installation}
   ## Usage
-
+  ${data.usage}
   ## Contributing
-
+  ${data.contributing}
   ## License
-
+  ${renderLicenseSection(data.license)}
   ## Tests
-
+  ${data.tests}
   ## Usage
-
+  ${data.usage}
   ## Questions
-
-
+  If you have any questions, email me at ${data.email}
 `;
 }
 
