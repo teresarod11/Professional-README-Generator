@@ -55,7 +55,7 @@ function generateMarkdown(data) {
   
   [Usage](#Usage)
   
-  [Contribution](#Contributing)
+  [Contributions](#Contributions)
   
   [License](#License)
   ${renderLicenseLink(data.license)}
@@ -69,7 +69,7 @@ function generateMarkdown(data) {
   ## Usage
   ${data.usage}
   ## Contributions
-  ${data.contributing}
+  ${data.contributions}
   ## License
   ${renderLicenseSection(data.license)}
   ## Tests

@@ -46,7 +46,17 @@ const questions = [
         type: "input",
         name: "installation",
         message: "What command should run to install dependencies?",
-        defaul: "npm i"
+        default: "npm i"
+    },   
+    {
+        type: "input",
+        name: "usage",
+        message: "What information do you want to provide about your repo?",
+    },
+    {
+        type: "input",
+        name: "contributions",
+        message: "What are your contribution guidelines?",
     },
     {
         type: "input",
@@ -59,16 +69,6 @@ const questions = [
         name: "tests",
         message: "What command do you want to run for tests?",
         default: "npm test"
-    },
-    {
-        type: "input",
-        name: "contributing",
-        message: "What are your contribution guidelines?",
-    },
-    {
-        type: "input",
-        name: "usage",
-        message: "What information do you want to provide about your repo?",
     },
 ];
 

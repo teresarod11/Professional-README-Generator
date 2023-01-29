@@ -1,4 +1,4 @@
-# kjsdf
+# README Generator
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   ## Table of Content
   [Description](#Description)
@@ -7,7 +7,7 @@
   
   [Usage](#Usage)
   
-  [Contribution](#Contributing)
+  [Contributions](#Contributions)
   
   [License](#License)
   
@@ -15,13 +15,13 @@
   [Tests](#Tests)
 
   ## Description
-  klajdf
+  this is readme generator
   ## Installation
-  lksjf
+  npm i
   ## Usage
-  ljkfa
+  lskdjf
   ## Contributions
-  lkjsdf
+  lksjdlf
   ## License
   Project is licensed by MIT
   ## Tests
