@@ -1,25 +1,30 @@
-# ldkjfl
-  
+# kjsdf
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   ## Table of Content
-  [Usage](#Usage)
   [Description](#Description)
+
   [Istallation](#Istallation)
-  [Contributing](#Contributing)
+  
+  [Usage](#Usage)
+  
+  [Contribution](#Contributing)
+  
   [License](#License)
+  
+  
+  [Tests](#Tests)
 
   ## Description
-  ldkfj
+  klajdf
   ## Installation
-  lsjdkf
+  lksjf
   ## Usage
-  lkfjs
-  ## Contributing
+  ljkfa
+  ## Contributions
   lkjsdf
   ## License
-  Project is licensed by [MIT]
+  Project is licensed by MIT
   ## Tests
   npm test
-  ## Usage
-  lkfjs
   ## Questions
-  If you have any questions, email me at dslkjf
+  If you have any questions, email me at rodriguez49372@gmail.com, otherwise you can find more of my work at [Github](https://github.com/teresarod11)

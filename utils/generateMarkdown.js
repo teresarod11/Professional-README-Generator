@@ -17,7 +17,7 @@
 //Function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  if (license === 'The MIT License'){
+  if (license === 'MIT'){
     return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
   } else {
     return '';
@@ -27,8 +27,8 @@ function renderLicenseBadge(license) {
 //Function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  if (license === 'The MIT License'){
-    return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
+  if (license === 'none'){
+    return `[license](#license)`
   } else {
     return '';
   }
@@ -40,21 +40,27 @@ function renderLicenseSection(license) {
   if ( license === 'none'){
     return '';
   } else {
-    return `Project is licensed by [${license}]`
+    return `Project is licensed by ${license}`
   }
 };
 
 //Function to generate markdown for README
 function generateMarkdown(data) {
-  renderLicenseBadge(data.license);
   return `# ${data.title}
-  
+  ${renderLicenseBadge(data.license)}
   ## Table of Content
-  [Usage](#Usage)
   [Description](#Description)
+
   [Istallation](#Istallation)
-  [Contributing](#Contributing)
+  
+  [Usage](#Usage)
+  
+  [Contribution](#Contributing)
+  
   [License](#License)
+  ${renderLicenseLink(data.license)}
+  
+  [Tests](#Tests)
 
   ## Description
   ${data.description}
@@ -62,16 +68,14 @@ function generateMarkdown(data) {
   ${data.installation}
   ## Usage
   ${data.usage}
-  ## Contributing
+  ## Contributions
   ${data.contributing}
   ## License
   ${renderLicenseSection(data.license)}
   ## Tests
   ${data.tests}
-  ## Usage
-  ${data.usage}
   ## Questions
-  If you have any questions, email me at ${data.email}
+  If you have any questions, email me at ${data.email}, otherwise you can find more of my work at [Github](https://github.com/${data.username})
 `;
 }
 
