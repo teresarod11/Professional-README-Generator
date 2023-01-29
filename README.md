@@ -3,7 +3,7 @@
   ## Table of Content
   [Description](#Description)
 
-  [Istallation](#Istallation)
+  [Installation](#Installation)
   
   [Usage](#Usage)
   
